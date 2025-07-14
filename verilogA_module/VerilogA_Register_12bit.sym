@@ -1,0 +1,104 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=verilogA
+format="@name @@clk @@in0 @@in1 @@in2 @@in3 @@in4 @@in5 @@in6 @@in7 @@in8 @@in9 @@in10 @@in11 @@out0 @@out1 @@out2 @@out3 @@out4 @@out5 @@out6 @@out7 @@out8 @@out9 @@out10 @@out11 @@vdd @@vss @model"
+template="name=X1 model=VerilogA_Register_12bit_cell spiceprefix=X"
+
+device_model="tcleval(
+.subckt VerilogA_Register_12bit_cell clk in0 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 out0 out1 out2 out3 out4 out5 out6 out7 out8 out9 out10 out11 vdd vss
+N1 clk in0 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 out0 out1 out2 out3 out4 out5 out6 out7 out8 out9 out10 out11 vdd vss VerilogA_Register_12bit_model
+.ends VerilogA_Register_12bit_cell
+
+.model VerilogA_Register_12bit_model VerilogA_Register_12bit
+.control
+* Load compiled Verilog-A model
+pre_osdi /home/nguyen_khang/.xschem/project/verilogA_module/VerilogA_Register_12bit.osdi
+.endc
+)"}
+V {}
+S {}
+E {}
+L 4 30 -160 30 -140 {}
+L 4 -160 60 -140 60 {}
+L 4 -160 0 -140 0 {}
+L 4 -160 120 -140 120 {}
+L 4 -160 -60 -140 -60 {}
+L 4 120 -100 140 -100 {}
+L 4 120 -40 140 -40 {}
+L 4 120 20 140 20 {}
+L 4 120 80 140 80 {}
+L 4 -50 -160 -50 -140 {}
+L 4 -160 40 -140 40 {}
+L 4 -160 -80 -140 -80 {}
+L 4 -160 100 -140 100 {}
+L 4 -160 -20 -140 -20 {}
+L 4 120 100 140 100 {}
+L 4 120 40 140 40 {}
+L 4 120 -20 140 -20 {}
+L 4 120 -80 140 -80 {}
+L 4 -160 -100 -140 -100 {}
+L 4 -160 -40 -140 -40 {}
+L 4 -160 20 -140 20 {}
+L 4 -160 80 -140 80 {}
+L 4 120 120 140 120 {}
+L 4 120 60 140 60 {}
+L 4 120 0 140 0 {}
+L 4 120 -60 140 -60 {}
+L 4 -10 160 -10 180 {}
+B 5 27.5 -162.5 32.5 -157.5 {name=vdd dir=in}
+B 5 -162.5 57.5 -157.5 62.5 {name=in8 dir=in}
+B 5 -162.5 -2.5 -157.5 2.5 {name=in5 dir=in}
+B 5 -162.5 117.5 -157.5 122.5 {name=in11 dir=in}
+B 5 -162.5 -62.5 -157.5 -57.5 {name=in2 dir=in}
+B 5 137.5 -102.5 142.5 -97.5 {name=out11 dir=out}
+B 5 137.5 -42.5 142.5 -37.5 {name=out8 dir=out}
+B 5 137.5 17.5 142.5 22.5 {name=out5 dir=out}
+B 5 137.5 77.5 142.5 82.5 {name=out2 dir=out}
+B 5 -52.5 -162.5 -47.5 -157.5 {name=clk dir=in}
+B 5 -162.5 37.5 -157.5 42.5 {name=in7 dir=in}
+B 5 -162.5 -82.5 -157.5 -77.5 {name=in1 dir=in}
+B 5 -162.5 97.5 -157.5 102.5 {name=in10 dir=in}
+B 5 -162.5 -22.5 -157.5 -17.5 {name=in4 dir=in}
+B 5 137.5 97.5 142.5 102.5 {name=out1 dir=out}
+B 5 137.5 37.5 142.5 42.5 {name=out4 dir=out}
+B 5 137.5 -22.5 142.5 -17.5 {name=out7 dir=out}
+B 5 137.5 -82.5 142.5 -77.5 {name=out10 dir=out}
+B 5 -162.5 -102.5 -157.5 -97.5 {name=in0 dir=in}
+B 5 -162.5 -42.5 -157.5 -37.5 {name=in3 dir=in}
+B 5 -162.5 17.5 -157.5 22.5 {name=in6 dir=in}
+B 5 -162.5 77.5 -157.5 82.5 {name=in9 dir=in}
+B 5 137.5 117.5 142.5 122.5 {name=out0 dir=out}
+B 5 137.5 57.5 142.5 62.5 {name=out3 dir=out}
+B 5 137.5 -2.5 142.5 2.5 {name=out6 dir=out}
+B 5 137.5 -62.5 142.5 -57.5 {name=out9 dir=out}
+B 5 -12.5 177.5 -7.5 182.5 {name=vss dir=in}
+P 4 5 120 -140 -140 -140 -140 160 120 160 120 -140 {}
+T {@symname} -82 4 0 0 0.3 0.3 {}
+T {@name} 125 -142 0 0 0.2 0.2 {}
+T {vdd} 45 -116 2 0 0.2 0.2 {}
+T {in8} -135 56 0 0 0.2 0.2 {}
+T {in5} -135 -4 0 0 0.2 0.2 {}
+T {in11} -135 116 0 0 0.2 0.2 {}
+T {in2} -135 -64 0 0 0.2 0.2 {}
+T {out11} 115 -104 0 1 0.2 0.2 {}
+T {out8} 115 -44 0 1 0.2 0.2 {}
+T {out5} 115 16 0 1 0.2 0.2 {}
+T {out2} 115 76 0 1 0.2 0.2 {}
+T {clk} -35 -116 2 0 0.2 0.2 {}
+T {in7} -135 36 0 0 0.2 0.2 {}
+T {in1} -135 -84 0 0 0.2 0.2 {}
+T {in10} -135 96 0 0 0.2 0.2 {}
+T {in4} -135 -24 0 0 0.2 0.2 {}
+T {out1} 115 96 0 1 0.2 0.2 {}
+T {out4} 115 36 0 1 0.2 0.2 {}
+T {out7} 115 -24 0 1 0.2 0.2 {}
+T {out10} 115 -84 0 1 0.2 0.2 {}
+T {in0} -135 -104 0 0 0.2 0.2 {}
+T {in3} -135 -44 0 0 0.2 0.2 {}
+T {in6} -135 16 0 0 0.2 0.2 {}
+T {in9} -135 76 0 0 0.2 0.2 {}
+T {out0} 115 116 0 1 0.2 0.2 {}
+T {out3} 115 56 0 1 0.2 0.2 {}
+T {out6} 115 -4 0 1 0.2 0.2 {}
+T {out9} 115 -64 0 1 0.2 0.2 {}
+T {vss} -15 136 0 0 0.2 0.2 {}

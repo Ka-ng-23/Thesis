@@ -1,0 +1,70 @@
+
+// VerilogA for SAR_VerilogA, VerilogA_Register_12bit, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module VerilogA_Register_12bit(clk,in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,vdd,vss);
+
+//parameter real vtrans=0.5;
+parameter real delay = 0;
+parameter real ttime = 1p;
+parameter real clk_threshold = 0.9;
+
+inout vdd,vss;
+input clk,in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11;
+output out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11;
+
+electrical clk,in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,vdd,vss;
+real d_0,d_1,d_2,d_3,d_4,d_5,d_6,d_7,d_8,d_9,d_10,d_11;
+real clk_prev;
+
+analog begin
+	//@(cross(V(clk) - clk_threshold, +1)) 
+	@(initial_step) clk_prev = 0;
+	if ((V(clk) > clk_threshold) && (clk_prev <= clk_threshold))
+	begin
+		d_11 = V(in11);
+                d_10 = V(in10);
+                d_9 = V(in9);
+                d_8 = V(in8);
+		d_7 = V(in7);
+		d_6 = V(in6);
+		d_5 = V(in5);
+		d_4 = V(in4);
+		d_3 = V(in3);
+		d_2 = V(in2);
+		d_1 = V(in1);
+		d_0 = V(in0);
+	end
+
+        /*V(out11) <+ transition(d_11,delay,ttime);
+        V(out10) <+ transition(d_10,delay,ttime);
+        V(out9) <+ transition(d_9,delay,ttime);
+        V(out8) <+ transition(d_8,delay,ttime);
+	V(out7) <+ transition(d_7,delay,ttime);
+    	V(out6) <+ transition(d_6,delay,ttime);
+    	V(out5) <+ transition(d_5,delay,ttime);
+    	V(out4) <+ transition(d_4,delay,ttime);
+    	V(out3) <+ transition(d_3,delay,ttime);
+    	V(out2) <+ transition(d_2,delay,ttime);
+    	V(out1) <+ transition(d_1,delay,ttime);
+    	V(out0) <+ transition(d_0,delay,ttime);*/
+    	
+    	V(out11) <+ (d_11 > 0.5 ? 1 : 0);
+    	V(out10) <+ (d_10 > 0.5 ? 1 : 0);
+    	V(out9)  <+ (d_9 > 0.5 ? 1 : 0);
+    	V(out8)  <+ (d_8 > 0.5 ? 1 : 0);
+    	V(out7)  <+ (d_7 > 0.5 ? 1 : 0);
+    	V(out6)  <+ (d_6 > 0.5 ? 1 : 0);
+    	V(out5)  <+ (d_5 > 0.5 ? 1 : 0);
+    	V(out4)  <+ (d_4 > 0.5 ? 1 : 0);
+    	V(out3)  <+ (d_3 > 0.5 ? 1 : 0);
+    	V(out2)  <+ (d_2 > 0.5 ? 1 : 0);
+    	V(out1)  <+ (d_1 > 0.5 ? 1 : 0);
+    	V(out0)  <+ (d_0 > 0.5 ? 1 : 0);
+    	
+    	clk_prev = V(clk); 
+end
+endmodule
+
