@@ -1,0 +1,36 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 0 -80 0 -60 {}
+L 4 -120 -30 -100 -30 {}
+L 4 100 -40 120 -40 {}
+L 4 100 -10 120 -10 {}
+L 4 100 20 120 20 {}
+L 4 -120 30 -100 30 {}
+L 4 100 50 120 50 {}
+L 4 0 70 0 90 {}
+B 5 -2.5 -82.5 2.5 -77.5 {name=VDD dir=in}
+B 5 -122.5 -32.5 -117.5 -27.5 {name=Clock dir=in}
+B 5 117.5 -42.5 122.5 -37.5 {name=clk_sampB dir=out}
+B 5 117.5 -12.5 122.5 -7.5 {name=clk_samp dir=out}
+B 5 117.5 17.5 122.5 22.5 {name=clk_sarB dir=out}
+B 5 -122.5 27.5 -117.5 32.5 {name=EOC dir=in}
+B 5 117.5 47.5 122.5 52.5 {name=clk_sar dir=out}
+B 5 -2.5 87.5 2.5 92.5 {name=VSS dir=in}
+P 4 5 100 -60 -100 -60 -100 70 100 70 100 -60 {}
+T {@symname} -75.5 -6 0 0 0.3 0.3 {}
+T {@name} 105 -62 0 0 0.2 0.2 {}
+T {VDD} 15 -46 2 0 0.2 0.2 {}
+T {Clock} -95 -34 0 0 0.2 0.2 {}
+T {clk_sampB} 95 -44 0 1 0.2 0.2 {}
+T {clk_samp} 95 -14 0 1 0.2 0.2 {}
+T {clk_sarB} 95 16 0 1 0.2 0.2 {}
+T {EOC} -95 26 0 0 0.2 0.2 {}
+T {clk_sar} 95 46 0 1 0.2 0.2 {}
+T {VSS} -5 56 0 0 0.2 0.2 {}
