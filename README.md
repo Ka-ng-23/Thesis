@@ -22,6 +22,10 @@ The SAR ADC consists of the following main blocks:
 - 🔸 **Dynamic Comparator** – for low-power and high-speed comparison  
 - 🔸 **SAR Logic** – controls the bit-by-bit approximation process  
 
+## 🧱 Block Diagram
+
+![SAR ADC Architecture](images/sar_adc_block_diagram.png)
+
 ## 🧪 Tools Used
 
 - 🛠️ [Xschem](https://github.com/StefanSchippers/xschem) – schematic capture  
