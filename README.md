@@ -24,7 +24,7 @@ The SAR ADC consists of the following main blocks:
 
 ## 🧱 Block Diagram
 
-![SAR ADC Architecture](images/sar_adc_block_diagram.png)
+![SAR ADC Architecture](Figures/top_level_adc.drawio.png)
 
 ## 🧪 Tools Used
 
